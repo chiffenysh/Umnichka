@@ -1,4 +1,0 @@
-Umnichka
-========
-
-work and learn
