@@ -9,13 +9,37 @@
 
 <body>
 <?php
+include('function.php');
 	
-	$strWord = "шоссе"; // наше слово,которое мы ввели(для проверки словаря)
-	$Dict = file('Dictionary.txt');
-
- 
-	$nFlag = 'TheEnd';
+	$pole = array ( 1 => array ( $a11='1'  , $a12='2'  , $a13='3'  , $a14='4'  , $a15='5'  ) ,
+					2 => array ( $a21='6'  , $a22='7'  , $a23='8'  , $a24='9'  , $a25='10' ) ,
+					3 => array ( $a31='11' , $a32='12' , $a33='13' , $a34='14' , $a35='15' ) ,
+					4 => array ( $a41='16' , $a42='17' , $a43='18' , $a44='19' , $a45='20' ) ,
+					5 => array ( $a51='21' , $a52='22' , $a53='23' , $a54='24' , $a55='25' )); 
+	
+	
+	$strWord = "путь"; // наше слово,которое мы ввели(для проверки словаря)
+	
+	
+	$Dict5 = file('Dictionary5.txt');
+	
+	$IndexRandWord5 = rand(1,2237);
+	$ArrRandWord5 = str_split_unicode(trim($Dict5[$IndexRandWord5])); // возвращает вместо слова из 5 букв , массив из 5 элементов
+	
+	for( $i=0 ; $i<=4 ; $i++)
+	{
+		$pole[3][$i]=$ArrRandWord5[$i];
+	}
+	
+	foreach ( $pole as $v1)
+	{
+		foreach( $v1 as $v2)
+		{
+			echo ( "$v2");
+		}
+	}
 	$strWordtmp = '';
+	
 	
 	$nFlagPlayer = rand(1,2); // кто первым будет ходить
 	//echo "$nFlagPlayer".'<br>';
@@ -28,6 +52,7 @@
 		$nFlagPlayer++;
 	}
 	
+	$nFlag = 'TheEnd';
 	do 
 	{
 		switch ( $nFlag )
@@ -140,25 +165,8 @@
 	$nCountLetter = mb_strlen ( $strWordtmp , "utf-8" ); //подсчет кол-ва букв в слове( для очков)
 	
 	// Проверка есть ли слово в словаре:
-	if(in_array("$strWord"."\n", $Dict) || in_array("$strWord"."\r\n", $Dict))
-		 echo 'Такое слово есть в словаре'.'<br>';
-	else echo 'Нет такого слова в словаре'.'<br>';
 	
 	
-	
-	
-	
-	
-	/*foreach ( $Dict as $key =>  $Dict) 
-	{
-		$Dict = trim ($Dict);
-		echo "Строка #<b>"."$key"."</b> : " . "$Dict";
-	}
-	
-	*/
-	//print_r($Dict);
-
-		
 	
 	 
 ?>
