@@ -10,7 +10,7 @@
 <body>
 <?php
 include('function.php');
-	
+include('timer.php');
 	$pole = array ( 1 => array ( $a11='*' , $a12='*' , $a13='*' , $a14='*' , $a15='*' ) ,
 					2 => array ( $a21='*' , $a22='*' , $a23='*' , $a24='*' , $a25='*' ) ,
 					3 => array ( $a31='*' , $a32='*' , $a33='*' , $a34='*' , $a35='*' ) ,
@@ -165,11 +165,18 @@ include('function.php');
 	
 	$nCountLetter = mb_strlen ( $strWordtmp , "utf-8" ); //подсчет кол-ва букв в слове( для очков)
 	
-	// Проверка есть ли слово в словаре:
+
 	
 	
 	
 	 
 ?>
+<body onload="startTimer()">
+<p> <span id="my_timer" style="color: black;  font-size: 200%; font-weight: bold;" align="right">5:01</span></p>
+</body>
+	<div id="area">
+		<input type="button" onclick= value ="Click Me">
+	</div>
+	
 </body>
 </html>

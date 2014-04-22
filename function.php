@@ -33,5 +33,112 @@
 			// не доделано
 		}
 	}
+	// функция установки буквы в поле
+	function InstallLetter ( $name )
+	{
+		switch ( $name )
+		{
+			case 'А':                  // дописываем в $strWordtmp по символу
+				"$strWordtmp".'а';
+				break;
+			case 'Б':
+				"$strWordtmp".'б';
+				break;
+			case 'В':
+				"$strWordtmp".'в';
+				break;
+			case 'Г':
+				"$strWordtmp".'г';
+				break;
+			case 'Д':
+				"$strWordtmp".'д';
+				break;
+			case 'Е':
+				"$strWordtmp".'е';
+				break;
+			case 'Ё':
+				"$strWordtmp".'ё';
+				break;
+			case 'Ж':
+				"$strWordtmp".'ж';
+				break;
+			case 'З':
+				"$strWordtmp".'з';
+				break;
+			case 'И':
+				"$strWordtmp".'и';
+				break;
+			case 'Й':
+				"$strWordtmp".'й';
+				break;
+			case 'К':
+				"$strWordtmp".'к';
+				break;
+			case 'Л':
+				"$strWordtmp".'л';
+				break;
+			case 'М':
+				"$strWordtmp".'м';
+				break;
+			case 'Н':
+				"$strWordtmp".'н';
+				break;
+			case 'О':
+				"$strWordtmp".'о';
+				break;
+			case 'П':
+				"$strWordtmp".'п';
+				break;
+			case 'Р':
+				"$strWordtmp".'р';
+				break;
+			case 'С':
+				"$strWordtmp".'с';
+				break;
+			case 'Т':
+				"$strWordtmp".'т';
+				break;
+			case 'У':
+				"$strWordtmp".'у';
+				break;
+			case 'Ф':
+				"$strWordtmp".'ф';
+				break;
+			case 'Х':
+				"$strWordtmp".'х';
+				break;
+			case 'Ц':
+				"$strWordtmp".'ц';
+				break;
+			case 'Ч':
+				"$strWordtmp".'ч';
+				break;
+			case 'Ш':
+				"$strWordtmp".'ш';
+				break;
+			case 'Щ':
+				"$strWordtmp".'щ';
+				break;
+			case 'Ь':
+				"$strWordtmp".'ь';
+				break;
+			case 'Ы':
+				"$strWordtmp".'ы';
+				break;
+			case 'Ъ':
+				"$strWordtmp".'ъ';
+				break;		
+			case 'Э':
+				"$strWordtmp".'э';
+				break;
+			case 'Ю':
+				"$strWordtmp".'ю';
+				break;
+			case 'Я':
+				"$strWordtmp".'я';
+				break;
+		}
+	
+	}
 	
 ?>	
